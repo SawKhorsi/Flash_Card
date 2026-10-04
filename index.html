@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Malay - Thai Flash Cards</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- CHAPTER SELECTION -->
+        <div id="chapter-screen">
+
+            <h1>🇲🇾 Malay - Thai 🇹🇭</h1>
+
+            <h2>Flash Card Study</h2>
+
+            <p>Choose a chapter to study</p>
+
+            <div class="chapter-buttons">
+
+                <button onclick="chooseChapter(1)">
+                    Chapter 1
+                </button>
+
+                <button onclick="chooseChapter(2)">
+                    Chapter 2
+                </button>
+
+                <button onclick="chooseChapter(3)">
+                    Chapter 3
+                </button>
+
+                <button onclick="chooseChapter(4)">
+                    Chapter 4
+                </button>
+
+            </div>
+
+            <button
+                class="all-button"
+                onclick="chooseChapter('All')"
+            >
+                All Chapters
+            </button>
+
+        </div>
+
+
+        <!-- FLASH CARD SCREEN -->
+        <div id="flashcard-screen" class="hidden">
+
+            <div class="top-bar">
+
+                <button
+                    class="back-button"
+                    onclick="backToChapters()"
+                >
+                    ← Chapters
+                </button>
+
+                <span id="chapter-title">
+                    Chapter 1
+                </span>
+
+            </div>
+
+
+            <div
+                id="flashcard"
+                class="flashcard"
+                onclick="flipCard()"
+            >
+
+                <div id="language">
+                    Malay
+                </div>
+
+                <div id="timer">
+                    10
+                </div>
+
+                <div id="word">
+                    Loading...
+                </div>
+
+                <div class="tap-message">
+                    Tap card to show answer
+                </div>
+
+            </div>
+
+
+            <div class="answer-buttons">
+
+                <button
+                    class="wrong-button"
+                    onclick="unknownWord()"
+                >
+                    ✕
+                </button>
+
+                <button
+                    class="right-button"
+                    onclick="knownWord()"
+                >
+                    ✓
+                </button>
+
+            </div>
+
+
+            <p id="progress">
+                Words remaining: 0
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
